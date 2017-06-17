@@ -15,7 +15,7 @@
                     onClick: '&?'
                 },
                 link: function ($scope, $element, $attrs, ngModel) {
-                    var dpElement = $element.parent().hasClass('input-group') ? $element.parent() : $element;
+                    var dpElement = $($element.parent().hasClass('input-group') ? $element.parent() : $element);
 
                     $scope.$watch('options', function (newValue) {
                         var dtp = dpElement.data('DateTimePicker');
